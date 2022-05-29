@@ -106,7 +106,7 @@ with open(__file__, "r") as f:
 with open(__file__, "w") as f:
     f.write(code)
 
-system("python3 thehell.py")
+system(f"python3 {__file__}")
 exit()
 
 # encryption end
